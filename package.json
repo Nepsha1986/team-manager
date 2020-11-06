@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll"
   },
   "repository": {
     "type": "git",
@@ -25,20 +27,27 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
+    "@storybook/react": "^6.0.28",
     "@types/react-dom": "^16.9.9",
     "@webpack-cli/init": "^1.0.3",
+    "babel-loader": "^8.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.2.1",
     "node-sass": "^5.0.0",
+    "react-is": "^17.0.1",
     "sass-loader": "^10.0.5",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.3",
     "ts-loader": "^8.0.9",
     "typescript": "^4.0.5",
-    "webpack": "^5.4.0",
+    "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.7.1"
   }
