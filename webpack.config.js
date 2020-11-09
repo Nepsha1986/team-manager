@@ -14,36 +14,56 @@ module.exports = {
       filename: 'index.html'
     }),
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename:'main.[chunkhash].css' })
+    new MiniCssExtractPlugin({filename: 'main.[chunkhash].css'})
   ],
 
   module: {
-    rules: [{
-      test: /\.(ts|tsx)$/,
-      loader: 'ts-loader',
-      include: [path.resolve(__dirname, 'src')],
-      exclude: [/node_modules/]
-    }, {
-      test: /.(scss|css)$/,
+    rules: [
+      {
+        test: /\.(jsx|js|tsx|ts)$/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-react'
+              ]
+            }
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
+        include: [path.resolve(__dirname, 'src')],
+        exclude: [/node_modules/]
+      },
+      {
+        test: /.(scss|css)$/,
 
-      use: [{
-        loader: MiniCssExtractPlugin.loader
-      }, {
-        loader: "style-loader"
-      }, {
-        loader: "css-loader",
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
 
-        options: {
-          sourceMap: true
-        }
-      }, {
-        loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: "sass-loader",
 
-        options: {
-          sourceMap: true
-        }
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       }]
-    }]
   },
 
   resolve: {
