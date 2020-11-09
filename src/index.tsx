@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/main.scss';
+import '@main-styles';
 
 const App = () => {
     return <h1>React app</h1>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "test": "jest",
     "test:cover": "jest --coverage",
     "storybook": "start-storybook -p 6006 --no-dll",
