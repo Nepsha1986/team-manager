@@ -19,6 +19,11 @@ module.exports = {
       include: path.resolve(__dirname, '../'),
     });
 
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@main-styles": path.resolve(__dirname, "../src/styles/main.scss"),
+    };
+
     // Return the altered config
     return config;
   },
