@@ -7,6 +7,7 @@
     "start": "webpack serve",
     "build": "webpack",
     "test": "jest",
+    "test:cover": "jest --coverage",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/Nepsha1986/team-manager#readme",
   "dependencies": {
     "@types/react": "^16.9.55",
+    "classnames": "^2.2.6",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
@@ -36,6 +38,7 @@
     "@storybook/react": "^6.0.28",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
+    "@types/classnames": "^2.2.11",
     "@types/react-dom": "^16.9.9",
     "@webpack-cli/init": "^1.0.3",
     "awesome-typescript-loader": "^5.2.1",
@@ -65,7 +68,7 @@
       "tsx",
       "js"
     ],
-    "moduleNameMapper":{
+    "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
     }
