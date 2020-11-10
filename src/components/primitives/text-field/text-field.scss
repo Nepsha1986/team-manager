@@ -1,0 +1,43 @@
+$text-field-color: #332f31;
+$text-field-error-color: red;
+$text-field-label-size:  0.875rem;
+$text-field-input-border: 1px solid #7f7f7f;
+$text-field-input-border-radius: 2px;
+
+.text-field {
+  $self: &;
+  color: $text-field-color;
+
+  &__label {
+    font-size: $text-field-label-size;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  &__input {
+    display: block;
+    line-height: 1.5;
+    padding: 8px;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    border: $text-field-input-border;
+    border-radius: $text-field-input-border-radius;
+    margin-bottom: 0.2rem;
+  }
+
+  &__message {
+    color: lighten($text-field-color, 15%);
+    font-size: 0.8rem;
+  }
+
+  &--has-error {
+    #{$self}__input {
+      border-bottom: 1px solid $text-field-error-color;
+    }
+
+    #{$self}__message {
+      color: $text-field-error-color;
+    }
+  }
+}

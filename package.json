@@ -1,0 +1,84 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack --mode=production",
+    "test": "jest",
+    "test:cover": "jest --coverage",
+    "storybook": "start-storybook -p 6006 --no-dll",
+    "build-storybook": "build-storybook --no-dll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nepsha1986/team-manager.git"
+  },
+  "keywords": [],
+  "author": "Alex Nepsha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nepsha1986/team-manager/issues"
+  },
+  "homepage": "https://github.com/Nepsha1986/team-manager#readme",
+  "dependencies": {
+    "@types/react": "^16.9.55",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.3",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/preset-typescript": "^7.12.1",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/react": "^6.0.28",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.1",
+    "@types/classnames": "^2.2.11",
+    "@types/react-dom": "^16.9.9",
+    "@types/yup": "^0.29.9",
+    "@webpack-cli/init": "^1.0.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.6.3",
+    "mini-css-extract-plugin": "^1.2.1",
+    "node-sass": "^5.0.0",
+    "react-is": "^17.0.1",
+    "react-test-renderer": "^17.0.1",
+    "sass-loader": "^10.0.5",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^4.2.3",
+    "ts-loader": "^8.0.9",
+    "typescript": "^4.0.5",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.7.1"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "^@src(.*)$": "<rootDir>/src$1",
+      "^@main-styles(.*)$": "<rootDir>/__mocks__/styleMock.js",
+      "^@primitives(.*)$": "<rootDir>/src/components/primitives$1",
+      "^@blocks(.*)$": "<rootDir>/src/components/blocks$1",
+      "^@templates(.*)$": "<rootDir>/src/components/templates$1",
+      "^@pages(.*)$": "<rootDir>/src/components/pages$1"
+    }
+  }
+}
