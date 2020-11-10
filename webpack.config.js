@@ -69,8 +69,16 @@ module.exports = (env, argv) => {
 
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+      /*
+      * Also should be synced in tsconfig.json to work properly with IDEA.
+      * */
       alias: {
-        "@main-styles": path.resolve(__dirname, 'src/styles/main.scss')
+        "@": path.resolve(__dirname, 'src'),
+        "@main-styles": path.resolve(__dirname, 'src/styles/main.scss'),
+        "@primitives": path.resolve(__dirname, 'src/components/primitives'),
+        "@blocks": path.resolve(__dirname, 'src/components/blocks'),
+        "@templates": path.resolve(__dirname, 'src/components/templates'),
+        "@pages": path.resolve(__dirname, 'src/components/pages'),
       },
     },
 

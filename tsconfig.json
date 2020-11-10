@@ -7,7 +7,18 @@
     "target": "es5",
     "allowJs": true,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      /*
+      * Should be synced in webpack.config.js to compile properly.
+      */
+      "@/*": ["src/*"],
+      "@primitives/*": ["src/components/primitives/*"],
+      "@blocks/*": ["src/components/blocks/*"],
+      "@templates/*": ["src/components/templates/*"],
+      "@pages/*": ["src/components/pages/*"]
+    }
   },
   "include": ["src/**/*"]
 }
