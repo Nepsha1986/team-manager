@@ -10,10 +10,7 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      /*
-      * Should be synced in webpack.config.js to compile properly.
-      */
-      "@/*": ["src/*"],
+      "@src/*": ["src/*"],
       "@primitives/*": ["src/components/primitives/*"],
       "@blocks/*": ["src/components/blocks/*"],
       "@templates/*": ["src/components/templates/*"],

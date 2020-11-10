@@ -10,6 +10,11 @@ export interface TextFieldProps {
   id: string
 
   /**
+   * Value of TextField Component
+   */
+  value: string,
+
+  /**
    * Label of TextField Component
    */
   label?: string,
@@ -22,7 +27,9 @@ export interface TextFieldProps {
   /**
    * Additional information
    */
-  message?: string
+  message?: string,
+
+  [x:string]: any;
 }
 
 /**
@@ -32,6 +39,7 @@ const TextField: React.FC<TextFieldProps> = ({
   id,
   label,
   hasError = false,
+  value,
   message,
   ...props
 }) => {
@@ -56,6 +64,7 @@ const TextField: React.FC<TextFieldProps> = ({
         id={id}
         className={'text-field__input'}
         type="text"
+        value={value}
         {...props}
       />
       {message && <div className="text-field__message">

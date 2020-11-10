@@ -42,6 +42,7 @@
     "@testing-library/react": "^11.1.1",
     "@types/classnames": "^2.2.11",
     "@types/react-dom": "^16.9.9",
+    "@types/yup": "^0.29.9",
     "@webpack-cli/init": "^1.0.3",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^26.6.3",
@@ -72,7 +73,12 @@
     ],
     "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
-      "^@main-styles(.*)$": "<rootDir>/__mocks__/styleMock.js"
+      "^@src(.*)$": "<rootDir>/src$1",
+      "^@main-styles(.*)$": "<rootDir>/__mocks__/styleMock.js",
+      "^@primitives(.*)$": "<rootDir>/src/components/primitives$1",
+      "^@blocks(.*)$": "<rootDir>/src/components/blocks$1",
+      "^@templates(.*)$": "<rootDir>/src/components/templates$1",
+      "^@pages(.*)$": "<rootDir>/src/components/pages$1"
     }
   }
 }

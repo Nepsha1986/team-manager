@@ -22,6 +22,8 @@ export interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+
+  [x:string]: any;
 }
 
 /**
